@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kid_storeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categoria_productos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'kid_store.dbo.clientes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'kid_store.dbo.productos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="productos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="id_categoria" Type="int" />
+    <Property Name="precio_compra" Type="float" />
+    <Property Name="precio_venta" Type="float" />
+    <Property Name="ganancia" Type="float" />
+    <Property Name="descripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'kid_store.dbo.vw_productos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_productos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Producto" Type="varchar" MaxLength="50" />
+    <Property Name="Categoria" Type="varchar" MaxLength="50" />
+    <Property Name="Precio de compra" Type="float" />
+    <Property Name="Precio de venta" Type="float" />
+    <Property Name="Ganancia" Type="float" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="kid_storeModelStoreContainer">
+    <EntitySet Name="categoria_productos" EntityType="Self.categoria_productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [clientes].[id] AS [id], 
+    [clientes].[nombre] AS [nombre], 
+    [clientes].[apellido] AS [apellido], 
+    [clientes].[telefono] AS [telefono], 
+    [clientes].[direccion] AS [direccion]
+    FROM [dbo].[clientes] AS [clientes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="productos" EntityType="Self.productos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [productos].[id] AS [id], 
+    [productos].[nombre] AS [nombre], 
+    [productos].[id_categoria] AS [id_categoria], 
+    [productos].[precio_compra] AS [precio_compra], 
+    [productos].[precio_venta] AS [precio_venta], 
+    [productos].[ganancia] AS [ganancia], 
+    [productos].[descripcion] AS [descripcion]
+    FROM [dbo].[productos] AS [productos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_productos" EntityType="Self.vw_productos" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_productos].[id] AS [id], 
+    [vw_productos].[Producto] AS [Producto], 
+    [vw_productos].[Categoria] AS [Categoria], 
+    [vw_productos].[Precio de compra] AS [Precio de compra], 
+    [vw_productos].[Precio de venta] AS [Precio de venta], 
+    [vw_productos].[Ganancia] AS [Ganancia], 
+    [vw_productos].[Descripcion] AS [Descripcion]
+    FROM [dbo].[vw_productos] AS [vw_productos]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

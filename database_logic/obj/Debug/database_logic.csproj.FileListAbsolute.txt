@@ -1,0 +1,11 @@
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\bin\Debug\database_logic.dll.config
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\bin\Debug\database_logic.dll
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\bin\Debug\database_logic.pdb
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\bin\Debug\EntityFramework.dll
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\bin\Debug\EntityFramework.xml
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\obj\Debug\database_logic.csprojAssemblyReference.cache
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\obj\Debug\database_logic.csproj.CopyComplete
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\obj\Debug\database_logic.dll
+C:\Users\enman\OneDrive\Escritorio\C#\la_pañalera\database_logic\obj\Debug\database_logic.pdb
